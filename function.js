@@ -125,4 +125,4 @@ function letterConcatenat(bla, n) {
     return sumBla;
 }
 
-console.log(letterConcatenat("abc", 4));
+console.log(letterConcatenat("abc", 4)); cd
