@@ -1,0 +1,186 @@
+body{
+    background-color: #fff;
+    background-image: url("bg.png");
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.clearfix::after,
+.clearfix::before{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container{
+    width: 800px;
+    margin: 10px auto;
+}
+
+header{
+    padding: 60px 15px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    font-size: 1.1rem;
+}
+
+.logo{
+    float: left;
+}
+
+.text{
+    float: right;
+    margin-top: 20px;
+}
+
+.text h1{
+    margin: 0;
+}
+
+.text h3{
+    color: grey;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.main{
+    border-top: 1px solid #fff;
+    padding: 60px 0;
+}
+
+.main h2{
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+.about{
+    width: 40%;
+    float: left;
+    border-right: 1px solid rgb(204, 204, 204);
+    padding-right: 70px;
+    padding-bottom: 60px;
+    margin-bottom: 80px;
+}
+
+.about p{
+    color: #777;
+    line-height: 25px;
+    margin-top: 5px;
+    font-size: .7rem;
+}
+
+.form{
+    float: right;
+    width: 40%;
+    border-left: 1px solid #fff;
+    padding-left: 88px;
+}
+
+.form input{
+    display: block;
+    height: 25px;
+    width: 100%;
+    outline: 0;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.form textarea{
+    display: block;
+    height: 80px;
+    width: 100%;
+    outline: 0;
+    border: 1px solid #fff;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.form label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: .7rem;
+}
+
+.form button{
+    background: linear-gradient(to bottom, rgb(255,255,255) 0%,rgb(241,241,241) 50%,rgb(225,225,225) 51%,rgb(246,246,246) 100%);
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 10px 60px;
+    outline: 0;
+    transition: all .4s;
+    border: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+.form button:hover{
+    background: linear-gradient(to bottom, rgb(246,246,246) 1%,rgb(246,246,246) 2%,rgb(246,246,246) 2%,rgb(225,225,225) 51%,rgb(241,241,241) 54%,rgb(241,241,241) 54%,rgb(255,255,255) 100%);
+}
+
+.project p{
+    color: #777;
+    line-height: 25px;
+    margin-top: 5px;
+    font-size: .7rem;
+}
+
+.project span{
+    color: red;
+}
+
+.project img{
+    margin-right: 30px;
+    margin-top: 20px;
+    float: right;
+    border: 1px solid #fff;
+}
+
+
+.project img.mr{
+    margin-right: 0;
+}
+
+.footer{
+    margin-top: 50px;
+}
+
+.footer .icons{
+    display: inline-block;
+    float: left;
+}
+
+.footer .text{
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.text a:link,
+.text a:visited{
+    color: red;
+    text-decoration: none;
+}
+
+.text a:hover,
+.text a:hover{
+    border-bottom: 1px dotted red;
+}
+
+.footer .icons a{
+    font-size: 30px;
+    display: inline-block;
+    margin-right: 20px;
+    transition: all .3s; 
+}
+
+.footer .icons a:link,
+.footer .icons a:visited{
+    color: grey;
+}
+
+.footer .icons a:hover,
+.footer .icons a:active{
+    color: rgb(204, 204, 204);
+}
