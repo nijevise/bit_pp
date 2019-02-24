@@ -1,4 +1,4 @@
-/* Write a function to check whether the `input` is a string or not.
+/*1. Write a function to check whether the `input` is a string or not.
 
 "My random string" -> true
 12 -> false
@@ -109,3 +109,4 @@ function convertStringToArray(inputString) {
 console.log(convertStringToArray(myString));
 /*8 Write a function that accepts a number as a parameter and checks if the number is prime or not.
 Note: A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+*/
