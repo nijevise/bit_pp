@@ -1,11 +1,14 @@
-function sumEvenOde(arrZumHundert){
-    arrEven = [];
-    var sum = 0;
-    for(var i = 1; i< 1000; i++){
-        if(arrZumHundert[i]%2===0){
-            arrEven[arrEven.length] = arrZumHundert [i];
-            sum = arrEven[arrEven.length]++;
+function descendArr(arrStart) {
+    var arrFinal = arrStart;
+    var tmp;
+    for (var i = 0; i < arrFinal.length - 1; i++) {
+        for (var j = i + 1; j < arrFinal.length; j++) {
+            if (arrFinal[i] < arrFinal[j]) {
+                tmp = arrFinal[j];
+                arrFinal[j] = arrFinal[i];
+                arrFinal[i] = tmp;
+            }
         }
-    }return sum;
+    } return arrFinal;
 };
-console.log(sumEvenOde());
+console.log(descendArr([13, 11, 15, 5, 6, 1, 8, 12]));
