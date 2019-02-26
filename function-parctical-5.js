@@ -93,30 +93,6 @@ function rearrangeArr(arrNum) {
 }
 console.log(rearrangeArr([13, 11, 15, 5, 6, 1, 8, 12]));
 
-/*
-function bubbleSort(array) {
-   var done = false;
-   while (!done) {
-       done = true;
-       for (var i = 1; i < array.length; i++) {
-           if (array[i - 1] > array[i]) {
-               done = false;
-               var tmp = array[i - 1];
-
-               array[i - 1] = array[i];
-               array[i] = tmp;
-
-           }
-       }
-   }
-
-   return array;
-}
-
-var numbers = [12, 10, 15, 11, 14, 13, 16];
-bubbleSort(numbers);
-console.log(numbers);
-*/
 
 
 /* 5. (skip :))Sort a previously defined array in a descending order and display it in the console.
@@ -158,29 +134,97 @@ Input: [ "M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A" ]
 
 Output: AnStJoJoDaMa
 */
-
-/* 8.Write a program that takes a string and prints its characters out in reversed order in the console.
-Input:  Belgrade Institute of Technology
-Output: ygolonhceT fo etutitsnI edargleB
-*/
-function spellBackwords(stringText) {
-    var newText = "";
-    for (var i = 0; i < stringText.length; i++) {
-        newText = stringText[i] + newText;
-    } return newText;
-}; console.log(spellBackwords('Belgrade Institute of Technology'));
+function pickLetter(arrLong) {
+    var arrTwo = '';
+    var tmp;
+    for (var i = 0; i < arrLong.length; i++) {
+        if (arrLong[i].length >= 2 && typeof (arrLong[i]) === "string") {
+            tmp = arrLong[i];
+            arrTwo = arrTwo + tmp[0] + tmp[1];
+        }
+        else {
+            continue;
+        }
+    } return arrTwo;
+}
+console.log(pickLetter(["M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A"]));
 /* 9.Write a program that displays all the combinations of two numbers between 1 and 7. Don't display two of the same numbers at the same time. Display the number of possible combinations, as well. (E.g. (1.2),(2,1) is allowed, but not (1,1), (2,2)...).
 */
+function combineNum(num1, num2) {
+    finalArray = [];
+    additionArray = [];
+    for (var i = num1; i < num2; i++) {
+        for (var j = i + 1; j < num2 + 1; j++) {
+            if (i !== j) {
+                additionArray[additionArray.length] = i;
+                additionArray[additionArray.length] = j;
+                finalArray[finalArray.length] = additionArray;
+                additionArray = [];
+
+                additionArray[additionArray.length] = j;
+                additionArray[additionArray.length] = i;
+                finalArray[finalArray.length] = additionArray;
+                additionArray = [];
+            }
+        }
+    }
+    return finalArray;
+}
+console.log(combineNum(1, 7));
 /* 10. Write a program that checks if the entered number is a prime number (i.e. divisible only by 1 and by itself).
 Input:  17    | 15
 Output: true  | false
 */
+function findPrime(num) {
+    var result = true;
+    for (var i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return !result;
+        }
+    } return result;
+};
+console.log(findPrime(73));
 /* 11.
 Check if a given string is a palindrome (spaces are ignored).
 Input:  eye  | Geek  | a nut for a jar of tuna
 Output: true | false | true
 */
+function findPalidrom(input) {
+    var words = true;
+    var spacesOut = function (sentence) {
+        var letters = "";
+        for (var i = 0; i < sentence.length; i++) {
+            if (sentence[i] === " ") {
+                continue;
+            }
+            else {
+                letters += sentence[i];
+            }
+        } return letters;
+    }
+    var finalArray = spacesOut(input);
+    for (var i = 0, j = finalArray.length - 1; i < finalArray.length / 2; i++ , j--) {
+        if (finalArray[i] === finalArray[j]) {
+            continue;
+        }
+        else {
+            return !words;
+        }
+    } return words;
+};
+console.log(findPalidrom('eye'));
+console.log(findPalidrom('Geek'));
+console.log(findPalidrom('a nut for a jar of tuna'));
 /* 12. Write a program that calculates the greatest common divisor of two integers. Note: The greatest common divisor of two non-zero integers is the greatest positive number that divides both numbers with no remainder.
 Input:  192 42 | 81 9
 Output: 6      | 9
 */
+function findGdivisor(num1, num2) {
+    var tmp;
+    for (var i = 0; i <= num2; i++) {
+        if (num1 % i === 0 && num2 % i === 0) {
+            tmp = i;
+        }
+    } return tmp;
+};
+console.log(findGdivisor(81, 9));
