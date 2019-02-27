@@ -1,11 +1,12 @@
-function program(a, b, c, d) {
-    var firstProgram = {
-        description: a,
-        "programming language": b,
-        gitRepository: c,
-        boolean: d,
-    };
-    return firstProgram;
+var input = [NaN, 23.1, 15, false, -22.5, '', 4, 7, null];
+function countInteger(bigStr){
+    var smallStr = '';
+    var numberInteger;
+    for (var i = 0; i < bigStr.length; i++){
+      smallStr += bigStr[i] ;
+      numberInteger = parseInt(smallStr);
+       
+    } return numberInteger
 };
-c1 = program("OOP", "JavaScript", "MarinaPesic", true);
-console.log(c1.description);
+var res = countInteger(input);
+console.log(countInteger(res));

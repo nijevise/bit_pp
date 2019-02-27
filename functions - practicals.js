@@ -44,8 +44,20 @@ function aritmeticMean(a, b, c, d) {
     } product = sum / arguments.length;
     return product;
 } console.log(aritmeticMean(1, 2, 3, 4, 0));
-
-/*7.Write a program that calculates a number of digits of a given number.
+/* 5. Write a program that draws a square of a given size. For example,  if the size of square is 5 the program should draw: 
+*****
+*   *
+*   *
+*   *
+*****
+*/
+/* 6.
+Write a program that draws a horizontal chart representing three given values. For example, if values are 5, 3, and 7, the program should draw:
+* * * * *
+* * *
+* * * * * * *
+*/
+/* 7.Write a program that calculates a number of digits of a given number.
 */
 function numberOfDigits(m) {
     var stringNum = "" + m;
