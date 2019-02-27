@@ -1,11 +1,11 @@
-var input = "prograMming";
-//var numOfStars = 0;
-(function (a){
-    //var index = i;
-    for( var i = 0; i < a.lengt; i++){
-        if (a[i] === 'm' || a[i] === 'M'){ 
-          
-        a[i] = "*";
-    }   console.log(a);
-    }   
-}) (input)
+function program(a, b, c, d) {
+    var firstProgram = {
+        description: a,
+        "programming language": b,
+        gitRepository: c,
+        boolean: d,
+    };
+    return firstProgram;
+};
+c1 = program("OOP", "JavaScript", "MarinaPesic", true);
+console.log(c1.description);
