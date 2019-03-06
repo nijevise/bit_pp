@@ -69,37 +69,53 @@
 // 6.   
 // Write a function to convert a string to its abbreviated form. 
 // 	"John Snow" -> 	"John S."
-function abbrevateName(stringFullName) {
-    var lastName = "";
-    var separeteNames = stringFullName.split(" ");
-    lastName = separeteNames[0] + ' ' + separeteNames[1][0] + '.';
-    return lastName;
-}
-console.log(abbrevateName("John Snow"));
+// function abbrevateName(stringFullName) {
+//     var lastName = "";
+//     var separeteNames = stringFullName.split(" ");
+//     lastName = separeteNames[0] + ' ' + separeteNames[1][0] + '.';
+//     return lastName;
+// }
+// console.log(abbrevateName("John Snow"));
 // 7.
 // Write a function that can pad (left, right) a string to get to a determined length.
 // 	'0000', 123, 'l' -> 0123 
 // '00000000', 123, 'r' -> 12300000
-function spliceString(stringPad, stringNoPadding, side) {
-    var newNumer = "";
-    if (stringPad.length > stringNoPadding.length) {
-        if (side === "l") {
-            newNumer = stringNoPadding.splice(0, 0, stringPad.length - stringNoPadding.length)
-        }
+// function spliceString(stringPad, stringNoPadding, side) {
+//     var newNumer = "";
+//     if (stringPad.length > stringNoPadding.length) {
+//         if (side === "l") {
+//             newNumer += stringPad.splice(1, stringNoPad.length, stringNoPadding);
+//             console.log(newNumer);
+//         }
 
-    }
-}
-
+//     } return newNumer;
+// }
+// console.log(spliceString('0000', 123, 'l'));
 
 // 8.
 // Write a function to capitalize the first letter of a string and returns modified string.
-
 // "js string exercises" -> "Js string exercises"
+// function capitalizeLetter(string) {
+//     var stringArr = string.split("");
+
+//     stringArr[0] = stringArr[0].toUpperCase();
+//     var newString = stringArr.join(" ")
+//     return newString;
+// }
+// console.log(capitalizeLetter("js string exercises"));
 
 // 9.
 // Write a function to hide email addresses to protect them from unauthorized users.
-
 // 	"somerandomaddress@example.com" -> "somerand...@example.com"
+function hideEmail(stringUrl) {
+
+    var num = stringUrl.indexOf("@") - 9;
+    var strArr = stringUrl.split("")
+    strArr.splice(num, 9, "...")
+    var newStr = strArr.join("")
+    console.log(newStr);
+}
+hideEmail("somerandomaddress@example.com");
 
 // 10.
 // Write a program that accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox', the output should be 'tHE qUICK bROWN fOX'.
