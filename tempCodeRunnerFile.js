@@ -1,1 +1,1 @@
-console.log(parseFloat("ff"));
+    // var banana = new Product('Banana', 2.56, '01.01.2019');
