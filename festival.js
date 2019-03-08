@@ -24,22 +24,22 @@
 
 // Add getData method to Program. It should return a formatted string of all data related to the program. The string should contain date, program length (calculated from length of all movies in a list) and data about movies in a list (see the example below). To display movie data, use Movie’s getData method.
 
-                        // Date, program length from all movies
-                        //      First movie title, length and genre
-                        //      Second movie title, length and genre
-                        //      Third movie title, length and genre
-                        //      Fourth movie name and length and genre
+// Date, program length from all movies
+//      First movie title, length and genre
+//      Second movie title, length and genre
+//      Third movie title, length and genre
+//      Fourth movie name and length and genre
 
 // 
 // Add method getData to Festival which return formatted string like festival name, number of movies in all programs and all programs listed. Use Programs getData method to list all programs. (example output is shown below)
 
-                            // Weekend festival has 4 movie titles
-                            // 	28.10.2017, program duration 368min
-                            // 		Spider-Man: Homecoming, 133min, AN
-                            // 		War for the Planet of the Apes, 140min, DA
-                            // 		The Dark Tower, 95min, WN
-                            // 	29.10.2017, program duration 108min
-                            // 		Deadpool, 108min, CY
+// Weekend festival has 4 movie titles
+// 	28.10.2017, program duration 368min
+// 		Spider-Man: Homecoming, 133min, AN
+// 		War for the Planet of the Apes, 140min, DA
+// 		The Dark Tower, 95min, WN
+// 	29.10.2017, program duration 108min
+// 		Deadpool, 108min, CY
 
 // Inside your immediately-invoking function, add createMovie function that receives a movie title, movie length and genre (as a string) as parameters and returns a created Movie.
 
@@ -66,54 +66,105 @@
 
 
 (function () {
-    'use strict'
 
-    function Genre(genre) {
+
+    function Genre(name) {
         var acronym;
         this.name = name;
-        this.getData = function(){
-            acronym = this.name[0] + this.name[name.length-1].toUpperCase();
+        this.getGenre = function () {
+            acronym = this.name[0] + this.name[name.length - 1].toUpperCase();
             return acronym;
-             
+
         }
     }
-    function Movie(title,duration,genre){
-  
-            this.title= "",
-            this.genre= function(genre){
-                return acronym;
+
+
+    function Movie(title, duration, genre) {
+        this.title = title;
+        this.genre = genre;
+        this.duration = duration
+
+        this.getData = function () {
+            return this.title + ", " + this.duration + " min" + ", " + this.genre.getGenre()
+        }
+    };
+
+
+
+
+    function Program(date) {
+        this.date = new Date(date);
+        this.listOfMovies = [];
+        this.NumOfMovies = this.listOfMovies.length;
+        this.totalDurationPerProgram = function () {
+            var totalProgramDuration = 0;
+            for (var i = 0; i < this.listOfMovies.length; i++) {
+                totalProgramDuration += this.listOfMovies[i].duration;
+
+            } return totalProgramDuration;
+        };
+
+        this.addMovie = function (movie) {
+            this.listOfMovies.push(movie)
+        }
+
+        this.addData = function () {
+            var str = ''
+            var str = this.date + ", " + this.totalDurationPerProgram() + "\n"
+
+            for (var i = 0; i < this.listOfMovies.length; i++) {
+                str += this.listOfMovies[i].getData() + "\n"
             }
-            this.duration = 0,
-            this.getData = function(){
-                return this.title + ", " + this.duration + ", " + this.acronym
+
+            return str
+        }
+    }
+
+
+    function Festival(name) {
+        this.name = name;
+        this.listOfPrograms = [];
+        this.numOfMoviesAll = 0;
+
+
+        this.addProgram = function (program) {
+            this.listOfPrograms.push(program)
+        }
+
+        this.getData = function () {
+            var str = "";
+            str += this.name + "has" + this.listOfPrograms.listOfMovies.length + "movie titles \n"
+            for (var i = 0; i < this.listOfPrograms.length; i++) {
+                str += this.listOfPrograms[i].date + ", " + " program duration " + this.listOfPrograms[i].totalDurationPerProgram() + "min \n"
+                for (var j = 0; j < this.listOfPrograms[i].listOfMovies[j]; j++) {
+                    str += this.listOfPrograms[i].listOfMovies[j].getData();
+                }
             }
-        };     
-var firstMovie = new Movie("Once Upon a Time in America","229min","Drama");
-var secondMovie = new Movie("Upside Down","229min","Fantasy");
-var thirdMovie = new Movie("Billy Elliot","110min","Music");
-var forthMovie = new Movie("Breaking the Waves","159min","Drama");
-    
-    // function Program () {
-    //         this.date = date,
-    //         this.listOfMovies= [],
-    //         this.totalNumOfMovies = 0;
-    //         this.addMovie = function(movie){
-    //             return listOfMovies.push(movie)
-    //         }
-    //     }
+            return str
+        }
 
+    }
 
-    // function Festival() {
-    //     this.name = name;
-    //     this.listOfPrograms = [];
-    //     this.numOfMoviesAll = 0;
-    //     this.addProgram = function(program){
+    var horror = new Genre('Horror');
+    var fantasy = new Genre('Fantasy');
+    var drama = new Genre('Drama');
+    var music = new Genre('Music');
+    var firstMovie = new Movie("Once Upon a Time in America", 229, horror);
+    var secondMovie = new Movie("Upside Down", 229, fantasy);
+    var thirdMovie = new Movie("Billy Elliot", 110, music);
+    var forthMovie = new Movie("Breaking the Waves", 159, drama);
+    var firstProgram = new Program("Oct / 2 / 2019");
+    firstProgram.addMovie(firstMovie);
+    firstProgram.addMovie(secondMovie);
+    var secondProgram = new Program("Oct / 3 / 2019");
+    secondProgram.addMovie(thirdMovie);
+    secondProgram.addMovie(forthMovie);
+    var fest = new Festival('Fest');
+    fest.addProgram(firstProgram)
+    fest.addProgram(secondProgram)
+    console.log(firstProgram.listOfMovies.length)
+    console.log(firstProgram.date)
+    console.log(firstProgram.addData())
+    console.log(fest.getData())
 
-    //     }
-           
-    // }
-
-
-
-
-}());
+})();
