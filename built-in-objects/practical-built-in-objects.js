@@ -42,7 +42,7 @@
 //     var middleWord = "";
 //     var joinWord;
 //     alphaString = text.split(" ");
-//     for (var i = 0; i < alphaString.length; i++) {
+//         for (var i = 0; i < alphaString.length; i++) {
 //         middleWord = alphaString[i].split("");
 //         middleWord.sort();
 //         joinWord = middleWord.join("");
@@ -57,7 +57,7 @@
 
 // 5. 
 // Write a function to split a string and convert it into an array of words.
-// 	"John Snow" -> [ 'John', 'Snow' ]
+	// "John Snow" -> [ 'John', 'Snow' ]
 
 // function splitAString(stringName) {
 //     return stringName.split(" ");
@@ -80,17 +80,17 @@
 // Write a function that can pad (left, right) a string to get to a determined length.
 // 	'0000', 123, 'l' -> 0123 
 // '00000000', 123, 'r' -> 12300000
-// function spliceString(stringPad, stringNoPadding, side) {
-//     var newNumer = "";
-//     if (stringPad.length > stringNoPadding.length) {
-//         if (side === "l") {
-//             newNumer += stringPad.splice(1, stringNoPad.length, stringNoPadding);
-//             console.log(newNumer);
-//         }
+function spliceString(stringPad, stringNoPadding, side) {
+    var newNumber = "";
+    if (stringPad.length > stringNoPadding.length) {
+        if (side === "l") {
+            newNumber += stringPad.splice(1, stringNoPadding.length, stringNoPadding);
+            console.log(newNumber);
+        }
 
-//     } return newNumer;
-// }
-// console.log(spliceString('0000', 123, 'l'));
+    } return newNumber;
+}
+console.log(spliceString('0000', 123, 'l'));
 
 // 8.
 // Write a function to capitalize the first letter of a string and returns modified string.
