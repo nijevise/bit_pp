@@ -1,11 +1,18 @@
 function spliceString(stringPad, stringNoPadding, side) {
-    var newNumber = "";
-    if (stringPad.length > stringNoPadding.length) {
-        if (side === "l") {
-            newNumber += stringPad.splice(1, stringNoPadding.length, stringNoPadding);
-            console.log(newNumber);
-        }
+//     var newNumber = "";
+//     if (stringPad.length > stringNoPadding.length) {
+//         if (side === "l") {
+//             var additionalElement = stringPad.length - stringNoPadding.length;
+//             newNumber += stringNoPad.splice(0, 0, additionalElement * '0');
 
-    } return newNumber;
-}
-console.log(spliceString('0000', 123, 'l'));
+//         }
+//         else {
+
+//         }
+
+//     }
+//     else {
+
+//     }
+//     //return newNumber;
+// }

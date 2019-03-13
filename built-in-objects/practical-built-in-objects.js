@@ -57,7 +57,7 @@
 
 // 5. 
 // Write a function to split a string and convert it into an array of words.
-	// "John Snow" -> [ 'John', 'Snow' ]
+// "John Snow" -> [ 'John', 'Snow' ]
 
 // function splitAString(stringName) {
 //     return stringName.split(" ");
@@ -80,17 +80,27 @@
 // Write a function that can pad (left, right) a string to get to a determined length.
 // 	'0000', 123, 'l' -> 0123 
 // '00000000', 123, 'r' -> 12300000
-function spliceString(stringPad, stringNoPadding, side) {
-    var newNumber = "";
-    if (stringPad.length > stringNoPadding.length) {
-        if (side === "l") {
-            newNumber += stringPad.splice(1, stringNoPadding.length, stringNoPadding);
-            console.log(newNumber);
-        }
+// function spliceString(stringPad, stringNoPadding, side) {
+//     var newNumber = "";
+//     var oduzimanje = stringPad.length - ((stringNoPadding.toString()).length);
+//     var additionalElement = stringPad.slice(0, oduzimanje);
+//     if (side === "l") {
+//         //var additionalElement = stringPad.slice(0, oduzimanje);
+//         //newNumber += stringNoPadding.splice(0, 0, additionalElement);
+//         newNumber = stringPad.slice(0, oduzimanje) + stringNoPadding;
 
-    } return newNumber;
-}
-console.log(spliceString('0000', 123, 'l'));
+//     }
+//     else {
+
+//         //newNumber += stringNoPadding.splice(stringNoPadding, 0, additionalElement);
+//         newNumber = stringNoPadding + additionalElement;
+//     }
+//     return newNumber;
+// }
+// //console.log("123".slice(0, 2));
+
+// console.log(spliceString('0000', 123, 'l'));
+// console.log(spliceString('00000000', 123, 'r'));
 
 // 8.
 // Write a function to capitalize the first letter of a string and returns modified string.
@@ -107,20 +117,52 @@ console.log(spliceString('0000', 123, 'l'));
 // 9.
 // Write a function to hide email addresses to protect them from unauthorized users.
 // 	"somerandomaddress@example.com" -> "somerand...@example.com"
-function hideEmail(stringUrl) {
+// function hideEmail(stringUrl) {
 
-    var num = stringUrl.indexOf("@") - 9;
-    var strArr = stringUrl.split("")
-    strArr.splice(num, 9, "...")
-    var newStr = strArr.join("")
-    console.log(newStr);
-}
-hideEmail("somerandomaddress@example.com");
+//     var num = stringUrl.indexOf("@") - 9;
+//     var strArr = stringUrl.split("")
+//     strArr.splice(num, 9, "...")
+//     var newStr = strArr.join("")
+//     console.log(newStr);
+// }
+// hideEmail("somerandomaddress@example.com");
 
 // 10.
 // Write a program that accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox', the output should be 'tHE qUICK bROWN fOX'.
-//        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
 
 // "The Quick Brown Fox" -> "tHE qUICK bROWN fOX"
+// function swopString(input) {
+//     var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//     var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+//     var newString = "";
+//     for (var i = 0; i < input.length; i++) {
+//         if (UPPER.includes(input[i])) {
+//             newString = newString + input[i].toLowerCase();
+//         }
+//         else {
+//             newString = newString + input[i].toUpperCase();
+//         }
+//     }
+//     return newString;
+// }
+// console.log(swopString("The Quick Brown Fox"));
+// var str = new String("Potato head");
+// console.log(str.slice(1, 8));
+// console.log(str.lastIndexOf("a"));
+var str = "Potato head";//'The quick brown fox jumps over the lazy dog.';
+console.log(str.split());
+//console.log(str.slice(31));
+// expected output: "the lazy dog."
 
+//console.log(str.slice(4, 19));
+// expected output: "quick brown fox"
+
+//console.log(str.slice(-4));
+// expected output: "dog."
+
+// console.log(str.substring(2, 3));
+// var a2 = new Array();
+// console.log(a2);
+// var b;
+// console.log(b);
