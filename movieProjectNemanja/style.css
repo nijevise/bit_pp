@@ -1,0 +1,32 @@
+input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+select{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, .1)
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+button{
+    color: #fff;
+    background-color: darkgreen;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size:  1.2rem;
+    border-radius: 10px;
+}
+
+#margin-list{
+    margin-top: 20px;
+}
