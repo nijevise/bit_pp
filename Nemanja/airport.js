@@ -4,10 +4,10 @@
     function Person(name, surname) {
         this.name = name;
         this.surname = surname;
+    }
 
-        this.getData = function () {
-            return this.name + ' ' + this.surname;
-        }
+    Person.prototype.getData = function () {
+        return this.name + ' ' + this.surname;
     }
 
     var mirko = new Person('Mirko', 'Zivanovic');
@@ -23,10 +23,10 @@
             : number;
 
         this.category = !category ? 'e' : category;
+    }
 
-        this.getData = function () {
-            return this.number + ', ' + this.category.toUpperCase();
-        }
+    Seat.prototype.getData = function () {
+        return this.number + ', ' + this.category.toUpperCase();
     }
 
     var e1 = new Seat(12, 'b');
@@ -38,11 +38,12 @@
     function Passenger(person, seat) {
         this.person = person;
         this.seat = seat;
+    }
 
+    Passenger.prototype.getData =
         this.getData = function () {
             return this.seat.getData() + ' ' + this.person.getData()
         }
-    }
 
     var pass1 = new Passenger(mirko, e1);
     var pass2 = new Passenger(dragana, e34);
@@ -55,24 +56,24 @@
         this.date = new Date(date).toDateString();
         this.listPassangers = [];
 
-        this.addPassangers = function (passanger) {
-            this.listPassangers.push(passanger);
+    }
+
+    Flight.prototype.addPassangers = function (passanger) {
+        this.listPassangers.push(passanger);
+    }
+
+    Flight.prototype.numOfPass = function () {
+        var num = this.listPassangers.length;
+        return num;
+    };
+
+    Flight.prototype.getData = function () {
+        var str = ''
+        str += this.date + ', ' + this.relation + '\n';
+        for (var i = 0; i < this.listPassangers.length; i++) {
+            str += this.listPassangers[i].getData() + '\n'
         }
-
-        this.numOfPass = function () {
-            var num = this.listPassangers.length;
-            return num;
-        };
-
-
-        this.getData = function () {
-            var str = ''
-            str += this.date + ', ' + this.relation + '\n';
-            for (var i = 0; i < this.listPassangers.length; i++) {
-                str += this.listPassangers[i].getData() + '\n'
-            }
-            return str;
-        }
+        return str;
     }
 
     var bgny = new Flight('Belgrade - NewYork', 'Oct / 12 / 2019');
@@ -86,28 +87,27 @@
     function Airport() {
         this.name = 'Nikola Tesla';
         this.listOfFlights = []
+    }
 
-        this.addFlight = function (flight) {
-            this.listOfFlights.push(flight);
+    Airport.prototype.addFlight = function (flight) {
+        this.listOfFlights.push(flight);
+    }
+
+    Airport.prototype.getData = function () {
+        var num = 0
+        var str = 'Airport: ';
+        str += this.name + ', total passangers: '
+        for (var i = 0; i < this.listOfFlights.length; i++) {
+            num += this.listOfFlights[i].numOfPass()
         }
-
-
-        this.getData = function () {
-            var num = 0
-            var str = 'Airport: ';
-            str += this.name + ', total passangers: '
-            for (var i = 0; i < this.listOfFlights.length; i++) {
-                num += this.listOfFlights[i].numOfPass()
+        str += num + '\n'
+        for (var i = 0; i < this.listOfFlights.length; i++) {
+            str += '   ' + this.listOfFlights[i].date + ', ' + this.listOfFlights[i].relation + '\n';
+            for (var j = 0; j < this.listOfFlights[i].listPassangers.length; j++) {
+                str += '        ' + this.listOfFlights[i].listPassangers[j].getData() + '\n'
             }
-            str += num + '\n'
-            for (var i = 0; i < this.listOfFlights.length; i++) {
-                str += '   ' + this.listOfFlights[i].date + ', ' + this.listOfFlights[i].relation + '\n';
-                for (var j = 0; j < this.listOfFlights[i].listPassangers.length; j++) {
-                    str += '        ' + this.listOfFlights[i].listPassangers[j].getData() + '\n'
-                }
-            }
-            return str
         }
+        return str
     }
 
     var nikolaTesla = new Airport()
