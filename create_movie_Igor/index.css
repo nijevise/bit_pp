@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+.newform{
+    margin-top: 10px;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid black;
+    margin: auto;
+    
+
+}
+input,label,select,button{
+    width: 100%;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+button{
+    background: rgb(75, 119, 9);
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    
+}

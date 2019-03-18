@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Create Movie</title>
+</head>
+
+<body>
+    <form class="newform" action="#">
+            <h1>New Festival</h1>
+       
+       
+        <label" name="title">Title</label>
+            <input class="movietitle" type="text">
+
+            <label name='length'>Length</label>
+            <input class="movielength" type="number">
+
+            <label>Genre</label>
+            <select class="genre" name="moviegenre">
+                <option value="Horor">Horor</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+            </select>
+            <button type="submit" class="createbutton">Create Movie</button>
+            <div class="movieList"></div>
+
+    </form>
+    <form class="secondform" action="#" >
+        <label>Program</label>
+        <input type="date" class="dateprogram" name="dateprogram">
+        <button class="createprogram">Create Program</button>
+        <div class="programList"></div>
+    </form>
+<form class="third" action="#">
+        <label >Chose Movie</label>
+        <select class="chosemovie">
+            <option>-</option>
+        </select>
+        <label>Chose Program</label>
+        <select class="choseprogram">
+            <option>-</option>
+
+        </select>
+
+        <button class="addmovietoprogram">Add Movie</button>
+    </form>
+
+    <script src="data.js" type="text/javascript"></script>
+    <script src="view.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
