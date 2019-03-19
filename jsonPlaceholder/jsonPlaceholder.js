@@ -1,6 +1,7 @@
 var myDiv = $('.myDiv');
 var ul = $('<ul>');
-ul.css('list-style', 'none')
+ul.css('list-style', 'none');
+var ID;
 
 
 $.ajax({
@@ -19,9 +20,10 @@ $.ajax({
         localStorage.setItem('data-posts-id', $(this).attr('data-posts-id'))
         window.location.href = 'file:///C:/Users/student/Desktop/MarinaPesic/bit_pp/jsonPlaceholder/postDetails.html'
 
-        var ID = localStorage.getItem('data-posts-id')
+        ID = localStorage.getItem('data-posts-id')
 
     })
 })
+
 
 
