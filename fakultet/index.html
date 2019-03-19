@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../fakultet/main.css">
+    <title>Exam statistics</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../fakultet/books.jpg" alt="">
+            <h1>Exam statistic june</h1>
+            <h3>Total students:</h3>
+            <input type="text" name="PASSED" id="passed" placeholder="PASSED">
+            <input type="text" name="FAILED" id="failed" placeholder="FAILED">
+        </header>
+        <nav>
+            <select name="subject" id="subject">
+                <option value="None">Select subject</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Web">Web</option>
+                <option value="React">React</option>
+                <option value="PHP">PHP</option>
+            </select>
+            <label name="subject">Subject</label>
+            <input type="text" class="subject" placeholder="Name Surname">
+
+            <select name="grade" id="grade">
+                <option value="None">Grade</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button class="btn">ADD</button>
+                      
+            
+        </nav>
+        <section>
+            <ul id="passed"></ul>
+            <ul id="failed"></ul>
+        </section>
+    </div>
+    <script src="../fakultet/subject.js" ></script>
+    <script src="../fakultet/student.js" ></script>
+    <script src="../fakultet/exam.js" ></script>
+    <script src="../fakultet/form.js" ></script>
+    <script src="../fakultet/app.js" ></script>
+
+</body>
+</html>

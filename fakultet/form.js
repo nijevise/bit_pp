@@ -1,0 +1,1 @@
+var $collectData = document.querySelector(".btn");
