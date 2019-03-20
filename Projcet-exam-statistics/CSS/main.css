@@ -1,0 +1,114 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    background-image: url("../Images/header.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 2% 0 5% 0;
+}
+
+header>p{
+    font-size: 1.4em;;
+}
+
+.green{
+    background-color: rgb(51, 184, 180);
+    width: 25%;
+    margin: 0 auto;
+    padding: 0 2%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1%;
+}
+
+.red{
+    background-color:rgb(252, 82, 79);
+    width: 25%;
+    margin: 0 auto;
+    padding: 0 2%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+form{
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    padding: 1%;
+    border-bottom: solid 1px rgb(221, 219, 219);
+    margin-bottom: 5%;
+}
+
+#subjects{
+    padding: 0.8%;
+    margin-right: 0.8%;
+    border-radius: 5px;
+}
+
+#name{
+    padding: 0.8%;
+    margin-right: 0.8%;
+    width: 25%;
+    border: solid 1px rgb(126, 165, 114);
+    border-radius: 5px;
+}
+
+#grade{
+    padding: 0.8%;
+    margin-right: 0.8%;
+    border-radius: 5px;
+}
+
+button{
+    color: rgb(37, 183, 179);
+    font-weight: bold;
+    font-size: 1.5em;
+    border: none;
+    background-color: rgb(247, 247, 247);
+}
+
+.list{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    color:grey;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.list li{
+    border-top: solid 1px rgb(215, 215, 215); 
+    border-bottom: solid 1px rgb(215, 215, 215);
+    padding: 2%;  
+}
+
+.passed{
+    width: 45%;
+    margin-right: 5%;
+}
+
+.failed{
+    width: 45%;
+}
+
+.failed>h3{
+    color:rgba(250, 80, 80)
+}
+
