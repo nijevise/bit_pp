@@ -1,9 +1,11 @@
-const findTax = price => price *0.2
+function filterGreater(arr){
 
-// {
-     // const texRate = 0.2;
-     //  let saleTax = price * texRate;
-//     return saleTax;
-// };  
-
-console.log(findTax(120));
+     let newArrayNow = [];
+     arr.forEach((item,index) => {
+          if(item > 10){
+               newArrayNow += arr.indexOf(item);
+          }
+     });
+     return newArrayNow.split('')+ '';
+};
+console.log(filterGreater([1.6, 11.34, 29.23, 7, 3.11, 18]));
