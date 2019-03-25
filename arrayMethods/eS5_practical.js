@@ -15,14 +15,9 @@
 // 2. Write a function that calculates sale tax that should be paid for the product of the given price. Use a constant to set a fixed value of the tax rate (i.e. 20% in Serbia). 
 // Input: 120
 // Output: 24
-const findTax = price => price *0.2
-findTax(120);
-// {
-     // const texRate = 0.2;
-     //  let saleTax = price * texRate;
-//     return saleTax;
-// };  
-
+const findTax = price => {
+     return price * 0.2
+};
 console.log(findTax(120));
 
 // 3. Write a function that increases each element of the given array by the given value. If the value is omitted, increase each element of the array by 1.  
